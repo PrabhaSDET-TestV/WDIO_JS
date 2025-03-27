@@ -1,0 +1,16 @@
+{
+  "name": "WDIO_JS",
+  "type": "module",
+  "devDependencies": {
+    "@wdio/appium-service": "^9.12.1",
+    "@wdio/cli": "^9.12.1",
+    "@wdio/local-runner": "^9.12.1",
+    "@wdio/mocha-framework": "^9.12.1",
+    "@wdio/spec-reporter": "^9.11.0",
+    "appium": "^2.17.1",
+    "appium-uiautomator2-driver": "^4.1.5"
+  },
+  "scripts": {
+    "wdio": "wdio run ./wdio.conf.js"
+  }
+}
