@@ -26,4 +26,32 @@ describe("Color Note", () =>{
         await expect($('//*[@resource-id="com.socialnmobile.dictapps.notepad.color.note:id/edit_btn"]')).toBeDisplayed();
         await expect($('//*[@resource-id="com.socialnmobile.dictapps.notepad.color.note:id/view_note"]')).toHaveText("One Piece\nNaruto\nBleach");
     })
+
+    it("Delete a note and check the note in the trash can", async() =>{
+        await driver.back();
+
+        const note = await $('//*[@resource-id="com.socialnmobile.dictapps.notepad.color.note:id/title"]').getText();
+
+        //Click on the Note
+        await $('//*[@resource-id="com.socialnmobile.dictapps.notepad.color.note:id/title"]').click();
+
+        //Click on more Icon
+        await $('~More').click();
+
+        //Click on Delete item
+        await $('//*[@text="Delete"]').click();
+
+        //Accept alert
+        await driver.acceptAlert();
+
+        //Click on the nav icon
+        await $('//*[@resource-id="com.socialnmobile.dictapps.notepad.color.note:id/icon_nav"]').click();
+
+        //Click on Trash can item
+        await $('//*[@text="Trash Can"]').click();
+
+        //Assertions
+        const trashCanItem = await $('//*[@resource-id="com.socialnmobile.dictapps.notepad.color.note:id/title"]');
+        await expect(trashCanItem).toHaveText(note);
+    })
 })
