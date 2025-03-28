@@ -58,7 +58,7 @@ describe("Android Elements Tests", () => {
         await expect(actualList).toEqual(expectedList);
     });
 
-    it.only("Working with text field", async()=>{
+    it("Working with text field", async()=>{
         //Access the auto complete screen
         await $('~Views').click();
         await $('//*[@text="Auto Complete"]').click();

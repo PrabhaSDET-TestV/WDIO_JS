@@ -56,7 +56,7 @@ describe("Android Native", () => {
         await driver.pause(3000);
     })
 
-    it.only("Working with Date picker", async()=>{
+    it("Working with Date picker", async()=>{
         //Access the Date Picker
         await driver.startActivity("io.appium.android.apis","io.appium.android.apis.view.DateWidgets1");
 
