@@ -1,8 +1,10 @@
+import { $, $$, expect, driver } from "@wdio/globals";
+
 describe("Android Elements Tests", () => {
     it("Find Element by Accessbility ID", async () => {
         //Find Element by Accessbility ID
         const appOption = await $('~App');
-
+        
         //Click on Element
         await appOption.click();
 
