@@ -1,5 +1,5 @@
 import path from "path";
-const { config } = require("./wdio.shared.conf");
+import { config } from "./wdio.shared.conf";
 
 config.port = 4723;
 config.specs = ["./test/specs/android/*.js"];
@@ -14,4 +14,4 @@ config.capabilities = [
   },
 ];
 
-exports.config = config;
+export { config };
