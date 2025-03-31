@@ -15,7 +15,7 @@ config.capabilities = [
     "appium:deviceName": "Pixel 4",
     "appium:platformVersion": "12.0",
     "appium:automationName": "UiAutomator2",
-    "appium:app": path.join(process.cwd(), "app/android/ColorNote_Notepad.apk"),
+    "appium:app": "bs://b67b6480e7775cd7a720837ba983b08eaa7e1956",
     "appium:autoGrantPermissions": true,
   },
 ];
