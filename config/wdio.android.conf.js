@@ -1,0 +1,17 @@
+import path from "path";
+const { config } = require("./wdio.shared.conf");
+
+config.port = 4723;
+config.specs = ["./test/specs/android/*.js"];
+config.capabilities = [
+  {
+    "appium:platformName": "Android",
+    "appium:deviceName": "Pixel 4",
+    "appium:platformVersion": "12.0",
+    "appium:automationName": "UiAutomator2",
+    "appium:app": path.join(process.cwd(), "app/android/ColorNote_Notepad.apk"),
+    "appium:autoGrantPermissions": true,
+  },
+];
+
+exports.config = config;

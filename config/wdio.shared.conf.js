@@ -2,14 +2,14 @@ import path from "path";
 
 export const config = {
     runner: 'local',
-    specs: [
-        './test/specs/**/*.js'
-    ],
+    // specs: [
+    //     './test/specs/android/*.js'
+    // ],
     exclude: [],
     maxInstances: 10,
     services: ['appium'],
     hostname: 'localhost',
-    port: 4723,
+    // port: 4723,
     path: '/wd/hub',
 
     capabilities: [{
@@ -17,7 +17,8 @@ export const config = {
         'appium:deviceName': 'Pixel 4',
         'appium:platformVersion': '12.0',
         'appium:automationName': 'UiAutomator2',
-        'appium:app': path.join(process.cwd(), 'app/android/ApiDemos-debug.apk')
+        'appium:app': path.join(process.cwd(), 'app/android/ColorNote_Notepad.apk'),
+        'appium:autoGrantPermissions': true
     }],
 
     logLevel: 'info',
