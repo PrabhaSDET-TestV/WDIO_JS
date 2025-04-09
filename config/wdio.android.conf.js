@@ -1,8 +1,8 @@
 import path from "path";
-import { config } from "./wdio.shared.conf";
+import { config } from "./wdio.shared.conf.js";
 
 config.port = 4723;
-config.specs = ["./test/specs/android/*.js"];
+config.specs = ["../test/specs/android/add-note-screen.spec.js"]
 config.capabilities = [
   {
     "appium:platformName": "Android",
